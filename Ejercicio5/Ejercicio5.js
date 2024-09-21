@@ -10,7 +10,7 @@ aplicara en base a lo que selecciono el usuario.
 //Agarrar el elemento del html
 let elemento = document.getElementById("TipoFord");
 
-function coches(precioCompra, marca){
+function coches(precioCompra, marca){ 
     let descuento=0;
 
     if(marca ==="FORD FIESTA"){
