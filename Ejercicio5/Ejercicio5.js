@@ -29,6 +29,45 @@ elemento.innerText = resultado;
 
 
 /**
+ * EJERCICIO 9:
+Crear programa donde se introduce una temperatura en Celsius y salga el resultado en
+Fahrenheit, una vez teniendo la temperatura en Fahrenheit deberá devolver lo siguiente:
+• Si ºF está entre 14 y 32, sale la frase “Temperatura baja”
+• Si ºF está entre 32 y 68, sale la frase “Temperatura adecuada”
+• Si ºF está entre 68 y 96, sale la frase “Temperatura alta”
+• Si no está entre ningún caso anterior la frase “Temperatura desconocida”
+ */
+
+
+function CacularTemperatura(){
+
+    let calculo=0;
+    //pedimos que ingrese la temperatura el celcius
+    let temperatura = parseFloat(prompt('Ingrese la temperatura en celcius'));
+//hace calculo de celsius a fahrenheit
+    calculo = (temperatura*1.8) +32;
+
+    let mensaje = '';
+
+    //estructura para de control anidada para el mensaje
+    if(calculo >=14 && calculo < 32){
+        mensaje = "Temperatura baja";
+    }else if(calculo >=32 && calculo < 68){
+        mensaje = "Temperatura adecuada";
+    }else if(calculo >=68 && calculo < 96) {
+        mensaje = "Temperatura alta";
+    }else{
+        mensaje = "temperatura desconocida"
+    }
+
+    alert(calculo + " Fahrenheit y es " + mensaje)
+
+
+}
+
+
+
+/**
  * Se cuenta con la siguiente información:
  * 
 • Las edades de 5 estudiantes del turno mañana.
@@ -95,7 +134,7 @@ function CalcularPromedios(){
 
         
             //alert(mensaje); //Puede mostrarnos el mensaje 
-            
+
             // Se muestra en pantalla los resultados a travez del id de la etiqueta en el html
             document.getElementById('resultado').innerHTML = mensaje;
 
